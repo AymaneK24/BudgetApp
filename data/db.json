@@ -1,0 +1,139 @@
+{
+  "todos": [
+    {
+      "id": "f663",
+      "nomorg": "COMMUNE BEN KHLIL",
+      "idoforg": "IDBENKHLIL9276",
+      "region": "Guelmim-Oued Noun",
+      "ville": "Tan-Tan",
+      "tele": "+212545187824",
+      "email": "TGRBENKHLIL@hotmaile.ma",
+      "completed": false
+    }
+  ],
+  "rapports": [],
+  "users": [
+    {
+      "id": "814b",
+      "userId": 0,
+      "firstName": "Khalid ",
+      "middleName": "idontwantto",
+      "lastName": "ABDULLAH",
+      "mobileNo": "0789504236",
+      "emailId": "whlw@gmail.com",
+      "altMobileNo": "",
+      "password": "123456"
+    }
+  ],
+  "initrs": [
+    {
+      "id": "444f",
+      "todo": {
+        "nomorg": "",
+        "idoforg": "",
+        "region": "",
+        "ville": "",
+        "tele": "",
+        "email": "",
+        "completed": false
+      },
+      "depensecsv": "",
+      "recettecsv": "Situation globale par Chapitre,,,,,,,,,,,,,,,,,\nDepartement Ordonnateur,0757 COMMUNE TAN TAN,,,,,,Situation au :,,11/07/2024,,,,,,,,\nAnnée Budgetaire,2023,,,,,,Nature crédits :,,CP,,,,,,,,\nChapitre,,Total des crédits,,Total Engagé,,Disponible Engagements,,Taux Engagements,,Total Emissions,,Disponible Emissions,,Taux emission réel,,Taux emission général,\n,,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés\n100012 : Dépenses de Fonctionnement,,61692964.01,61692964.01,59461784.86,59461784.86,2231179.15,2231179.15,96.00%,96.00%,56525467.59,56525467.59,5167496.42,5167496.42,95.00%,95.00%,92.00%,92.00%\n100022 : Dépenses d'Équipement,,30714239.54,30714239.54,10785997.42,10785997.42,-9929799.09,-9929799.09,35.00%,35.00%,4240092.13,4240092.13,26474147.41,26474147.41,39.00%,39.00%,14.00%,14.00%\n310102 : Comptes Spéciaux,,54358.28,54358.28,37619.42,37619.42,0,0,69.00%,69.00%,24535.5,24535.5,29822.78,29822.78,65.00%,65.00%,45.00%,45.00%\n310202 : Comptes Spéciaux,,1321260.82,1321260.82,1216652.26,1216652.26,0,0,92.00%,92.00%,512930.82,512930.82,808330,808330,42.00%,42.00%,39.00%,39.00%\n310402 : Comptes Spéciaux,,0,0,0,0,0,0,---,---,0,0,0,0,---,---,---,---\n310502 : Comptes Spéciaux,,320000,320000,0,0,0,0,0.00%,0.00%,0,0,320000,320000,---,---,0.00%,0.00%\n320102 : Comptes Spéciaux,,2485700,2485700,2485700,2485700,0,0,100.00%,100.00%,2485700,2485700,0,0,100.00%,100.00%,100.00%,100.00%\n320202 : Comptes Spéciaux,,600000,600000,600000,600000,0,0,100.00%,100.00%,600000,600000,0,0,100.00%,100.00%,100.00%,100.00%",
+      "year": 0
+    },
+    {
+      "id": "0f5d",
+      "todo": {
+        "id": "9159",
+        "nomorg": "Guelmime",
+        "idoforg": "",
+        "region": "",
+        "ville": "guelmime",
+        "tele": "",
+        "email": "bddby@gmail.com",
+        "completed": false
+      },
+      "depensecsv": "",
+      "recettecsv": "",
+      "year": 0
+    },
+    {
+      "id": "0355",
+      "todo": {
+        "id": "9159",
+        "nomorg": "Guelmime",
+        "idoforg": "",
+        "region": "",
+        "ville": "guelmime",
+        "tele": "",
+        "email": "bddby@gmail.com",
+        "completed": false
+      },
+      "depensecsv": "",
+      "recettecsv": "",
+      "year": 0
+    },
+    {
+      "id": "050e",
+      "todo": {
+        "nomorg": "",
+        "idoforg": "",
+        "region": "",
+        "ville": "",
+        "tele": "",
+        "email": "",
+        "completed": false
+      },
+      "depensecsv": "",
+      "recettecsv": "Situation globale par Chapitre,,,,,,,,,,,,,,,,,\nDepartement Ordonnateur,0757 COMMUNE TAN TAN,,,,,,Situation au :,,11/07/2024,,,,,,,,\nAnnée Budgetaire,2023,,,,,,Nature crédits :,,CP,,,,,,,,\nChapitre,,Total des crédits,,Total Engagé,,Disponible Engagements,,Taux Engagements,,Total Emissions,,Disponible Emissions,,Taux emission réel,,Taux emission général,\n,,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés\n100012 : Dépenses de Fonctionnement,,61692964.01,61692964.01,59461784.86,59461784.86,2231179.15,2231179.15,96.00%,96.00%,56525467.59,56525467.59,5167496.42,5167496.42,95.00%,95.00%,92.00%,92.00%\n100022 : Dépenses d'Équipement,,30714239.54,30714239.54,10785997.42,10785997.42,-9929799.09,-9929799.09,35.00%,35.00%,4240092.13,4240092.13,26474147.41,26474147.41,39.00%,39.00%,14.00%,14.00%\n310102 : Comptes Spéciaux,,54358.28,54358.28,37619.42,37619.42,0,0,69.00%,69.00%,24535.5,24535.5,29822.78,29822.78,65.00%,65.00%,45.00%,45.00%\n310202 : Comptes Spéciaux,,1321260.82,1321260.82,1216652.26,1216652.26,0,0,92.00%,92.00%,512930.82,512930.82,808330,808330,42.00%,42.00%,39.00%,39.00%\n310402 : Comptes Spéciaux,,0,0,0,0,0,0,---,---,0,0,0,0,---,---,---,---\n310502 : Comptes Spéciaux,,320000,320000,0,0,0,0,0.00%,0.00%,0,0,320000,320000,---,---,0.00%,0.00%\n320102 : Comptes Spéciaux,,2485700,2485700,2485700,2485700,0,0,100.00%,100.00%,2485700,2485700,0,0,100.00%,100.00%,100.00%,100.00%\n320202 : Comptes Spéciaux,,600000,600000,600000,600000,0,0,100.00%,100.00%,600000,600000,0,0,100.00%,100.00%,100.00%,100.00%",
+      "year": 0
+    },
+    {
+      "id": "36af",
+      "todo": {
+        "nomorg": "",
+        "idoforg": "",
+        "region": "",
+        "ville": "",
+        "tele": "",
+        "email": "",
+        "completed": false
+      },
+      "depensecsv": "",
+      "recettecsv": "Situation globale par Chapitre,,,,,,,,,,,,,,,,,\nDepartement Ordonnateur,0757 COMMUNE TAN TAN,,,,,,Situation au :,,11/07/2024,,,,,,,,\nAnnée Budgetaire,2023,,,,,,Nature crédits :,,CP,,,,,,,,\nChapitre,,Total des crédits,,Total Engagé,,Disponible Engagements,,Taux Engagements,,Total Emissions,,Disponible Emissions,,Taux emission réel,,Taux emission général,\n,,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés\n100012 : Dépenses de Fonctionnement,,61692964.01,61692964.01,59461784.86,59461784.86,2231179.15,2231179.15,96.00%,96.00%,56525467.59,56525467.59,5167496.42,5167496.42,95.00%,95.00%,92.00%,92.00%\n100022 : Dépenses d'Équipement,,30714239.54,30714239.54,10785997.42,10785997.42,-9929799.09,-9929799.09,35.00%,35.00%,4240092.13,4240092.13,26474147.41,26474147.41,39.00%,39.00%,14.00%,14.00%\n310102 : Comptes Spéciaux,,54358.28,54358.28,37619.42,37619.42,0,0,69.00%,69.00%,24535.5,24535.5,29822.78,29822.78,65.00%,65.00%,45.00%,45.00%\n310202 : Comptes Spéciaux,,1321260.82,1321260.82,1216652.26,1216652.26,0,0,92.00%,92.00%,512930.82,512930.82,808330,808330,42.00%,42.00%,39.00%,39.00%\n310402 : Comptes Spéciaux,,0,0,0,0,0,0,---,---,0,0,0,0,---,---,---,---\n310502 : Comptes Spéciaux,,320000,320000,0,0,0,0,0.00%,0.00%,0,0,320000,320000,---,---,0.00%,0.00%\n320102 : Comptes Spéciaux,,2485700,2485700,2485700,2485700,0,0,100.00%,100.00%,2485700,2485700,0,0,100.00%,100.00%,100.00%,100.00%\n320202 : Comptes Spéciaux,,600000,600000,600000,600000,0,0,100.00%,100.00%,600000,600000,0,0,100.00%,100.00%,100.00%,100.00%",
+      "year": 0
+    },
+    {
+      "id": "961b",
+      "todo": {
+        "id": "f663",
+        "nomorg": "COMMUNE BEN KHLIL",
+        "idoforg": "IDBENKHLIL9276",
+        "region": "Guelmim-Oued Noun",
+        "ville": "Tan-Tan",
+        "tele": "+212545187824",
+        "email": "TGRBENKHLIL@hotmaile.ma",
+        "completed": false
+      },
+      "depensecsv": ",,,,Situation des Recettes ,,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,\nMinistère,TRESORERIE PROVINCIALE TANTAN (CT)(1027-CT),,,,,,,,,,,,,,,,\nOrdonnateur,TRESORERIE PROVINCIALE TANTAN (CT)(1027-CT),,,,,,,,,,,,,,,,\nAnnée Budgétaire,2024,,,,,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,\n,,,,,,,,Situation arrêté au : ,,45484.57183,,,,,,,\n,,,,,,,,,,,,,,,,,\nChapitre de recettes,Intitulé,Recettes réalisées sur le budget,Recettes des projets ouverts par AS,Recettes des projets ouverts par AP,Virements de recettes(en -),Virements de recettes(en +),AP Modificative (en -),AP Modificative (en +),Recettes transférées (en -),Recettes transférées (en +),Recettes annulées (en -),Recettes annulées (en +),Solde reporté de l'année  2023 vers l'année en cours,Total des recettes,Total des émissions,Solde reporté de l'année  2024 vers l'année prochaine,Disponible de recettes\n100011,Recettes de Fonctionnement,36271121.71,0,0,0,0,0,0,0,0,0,0,0,36271121.71,20671669.57,0,15599452.14\n100021,Recettes d'Equipement,0,0,0,0,0,0,0,2936317.27,2936317.27,0,0,41435948.99,41435948.99,4284284.58,0,37151664.41\n310101,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,29822.78,29822.78,0,0,29822.78\n310201,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,808330,808330,45339,0,762991\n310401,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n310501,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,770034.98,770034.98,0,0,770034.98\n320101,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n320201,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n321001,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+      "recettecsv": "Situation globale par Chapitre,,,,,,,,,,,,,,,,,\nDepartement Ordonnateur,0757 COMMUNE TAN TAN,,,,,,Situation au :,,11/07/2024,,,,,,,,\nAnnée Budgetaire,2023,,,,,,Nature crédits :,,CP,,,,,,,,\nChapitre,,Total des crédits,,Total Engagé,,Disponible Engagements,,Taux Engagements,,Total Emissions,,Disponible Emissions,,Taux emission réel,,Taux emission général,\n,,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés\n100012 : Dépenses de Fonctionnement,,61692964.01,61692964.01,59461784.86,59461784.86,2231179.15,2231179.15,96.00%,96.00%,56525467.59,56525467.59,5167496.42,5167496.42,95.00%,95.00%,92.00%,92.00%\n100022 : Dépenses d'Équipement,,30714239.54,30714239.54,10785997.42,10785997.42,-9929799.09,-9929799.09,35.00%,35.00%,4240092.13,4240092.13,26474147.41,26474147.41,39.00%,39.00%,14.00%,14.00%\n310102 : Comptes Spéciaux,,54358.28,54358.28,37619.42,37619.42,0,0,69.00%,69.00%,24535.5,24535.5,29822.78,29822.78,65.00%,65.00%,45.00%,45.00%\n310202 : Comptes Spéciaux,,1321260.82,1321260.82,1216652.26,1216652.26,0,0,92.00%,92.00%,512930.82,512930.82,808330,808330,42.00%,42.00%,39.00%,39.00%\n310402 : Comptes Spéciaux,,0,0,0,0,0,0,---,---,0,0,0,0,---,---,---,---\n310502 : Comptes Spéciaux,,320000,320000,0,0,0,0,0.00%,0.00%,0,0,320000,320000,---,---,0.00%,0.00%\n320102 : Comptes Spéciaux,,2485700,2485700,2485700,2485700,0,0,100.00%,100.00%,2485700,2485700,0,0,100.00%,100.00%,100.00%,100.00%\n320202 : Comptes Spéciaux,,600000,600000,600000,600000,0,0,100.00%,100.00%,600000,600000,0,0,100.00%,100.00%,100.00%,100.00%",
+      "year": 2024
+    },
+    {
+      "id": "ba5d",
+      "todo": {
+        "id": "f663",
+        "nomorg": "COMMUNE BEN KHLIL",
+        "idoforg": "IDBENKHLIL9276",
+        "region": "Guelmim-Oued Noun",
+        "ville": "Tan-Tan",
+        "tele": "+212545187824",
+        "email": "TGRBENKHLIL@hotmaile.ma",
+        "completed": false
+      },
+      "depensecsv": ",,,,Situation des Recettes ,,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,\nMinistère,TRESORERIE PROVINCIALE TANTAN (CT)(1027-CT),,,,,,,,,,,,,,,,\nOrdonnateur,TRESORERIE PROVINCIALE TANTAN (CT)(1027-CT),,,,,,,,,,,,,,,,\nAnnée Budgétaire,2024,,,,,,,,,,,,,,,,\n,,,,,,,,,,,,,,,,,\n,,,,,,,,Situation arrêté au : ,,45484.57183,,,,,,,\n,,,,,,,,,,,,,,,,,\nChapitre de recettes,Intitulé,Recettes réalisées sur le budget,Recettes des projets ouverts par AS,Recettes des projets ouverts par AP,Virements de recettes(en -),Virements de recettes(en +),AP Modificative (en -),AP Modificative (en +),Recettes transférées (en -),Recettes transférées (en +),Recettes annulées (en -),Recettes annulées (en +),Solde reporté de l'année  2023 vers l'année en cours,Total des recettes,Total des émissions,Solde reporté de l'année  2024 vers l'année prochaine,Disponible de recettes\n100011,Recettes de Fonctionnement,36271121.71,0,0,0,0,0,0,0,0,0,0,0,36271121.71,20671669.57,0,15599452.14\n100021,Recettes d'Equipement,0,0,0,0,0,0,0,2936317.27,2936317.27,0,0,41435948.99,41435948.99,4284284.58,0,37151664.41\n310101,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,29822.78,29822.78,0,0,29822.78\n310201,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,808330,808330,45339,0,762991\n310401,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n310501,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,770034.98,770034.98,0,0,770034.98\n320101,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n320201,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0\n321001,Recettes Comptes Spéciaux,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+      "recettecsv": "Situation globale par Chapitre,,,,,,,,,,,,,,,,,\nDepartement Ordonnateur,0757 COMMUNE TAN TAN,,,,,,Situation au :,,11/07/2024,,,,,,,,\nAnnée Budgetaire,2023,,,,,,Nature crédits :,,CP,,,,,,,,\nChapitre,,Total des crédits,,Total Engagé,,Disponible Engagements,,Taux Engagements,,Total Emissions,,Disponible Emissions,,Taux emission réel,,Taux emission général,\n,,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés,Soumis,Visés\n100012 : Dépenses de Fonctionnement,,61692964.01,61692964.01,59461784.86,59461784.86,2231179.15,2231179.15,96.00%,96.00%,56525467.59,56525467.59,5167496.42,5167496.42,95.00%,95.00%,92.00%,92.00%\n100022 : Dépenses d'Équipement,,30714239.54,30714239.54,10785997.42,10785997.42,-9929799.09,-9929799.09,35.00%,35.00%,4240092.13,4240092.13,26474147.41,26474147.41,39.00%,39.00%,14.00%,14.00%\n310102 : Comptes Spéciaux,,54358.28,54358.28,37619.42,37619.42,0,0,69.00%,69.00%,24535.5,24535.5,29822.78,29822.78,65.00%,65.00%,45.00%,45.00%\n310202 : Comptes Spéciaux,,1321260.82,1321260.82,1216652.26,1216652.26,0,0,92.00%,92.00%,512930.82,512930.82,808330,808330,42.00%,42.00%,39.00%,39.00%\n310402 : Comptes Spéciaux,,0,0,0,0,0,0,---,---,0,0,0,0,---,---,---,---\n310502 : Comptes Spéciaux,,320000,320000,0,0,0,0,0.00%,0.00%,0,0,320000,320000,---,---,0.00%,0.00%\n320102 : Comptes Spéciaux,,2485700,2485700,2485700,2485700,0,0,100.00%,100.00%,2485700,2485700,0,0,100.00%,100.00%,100.00%,100.00%\n320202 : Comptes Spéciaux,,600000,600000,600000,600000,0,0,100.00%,100.00%,600000,600000,0,0,100.00%,100.00%,100.00%,100.00%",
+      "year": 2024
+    }
+  ]
+}

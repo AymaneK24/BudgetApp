@@ -1,0 +1,31 @@
+.container {
+    padding: 20px;
+  }
+  
+  .images {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .nav-pills .btn {
+    margin-right: 10px;
+  }
+  
+  #notselected {
+    color: red;
+  }
+  
+  .file-upload-wrapper {
+    display: inline-block;
+  }
+  

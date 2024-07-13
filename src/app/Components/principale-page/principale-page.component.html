@@ -1,0 +1,330 @@
+<div class="container">
+    
+  <div class="row align-items-center my-4">
+
+
+    <div class="col"><img  class="images" src="logo.png" width="100px"/></div>
+    <div class="col">
+      <h1 class="text-center">Gestion Budgétaire</h1>
+    </div>
+    <div class="col text-end">
+      <span>Bienvenue, {{nameLogger}} {{lastnameLogger}} </span> <label style="font-size: small;">Admin</label>
+      <button class="btn btn-outline-primary ms-2" routerLink=""  >   Déconnexion</button>
+    </div>
+</div>
+
+
+
+
+
+  <nav class="nav nav-pills justify-content-center mb-4" >
+    <button class="btn btn-success"   (click)="scrollToSection('organismes-section')"    > Communes  </button>
+    <button class="btn btn-success"  (click)="scrollToSection('rapports-section')"   >  Rapports  </button>
+    <button class="btn btn-success" (click)="scrollToSection('users-section')"  >    Utilisateurs </button>
+  </nav>
+  
+    <div class = "row justify-content-center mb-4">
+        
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <div class="col d-flex justify-content-center align-items-center">
+              <img class="images" src="logo1.png" width="900px"/>
+          </div>
+          
+            <h6>   Avec nous, la gestion budgétaire des organismes devinent simple, efficace et transparente. Grâce à notre plateforme intuitive, vous
+               pouvez saisir, visualiser et gérer vos données financières en toute confiance, assurant ainsi une administration financière complète
+                et conforme aux normes les plus strictes.</h6>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div id="organismes-section">
+    <div class="row justify-content-center mb-4">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Organismes </h5>
+            <ul class="list-group list-group-flush">
+              @if(ifnull(todo)){
+                @for(todo of todos; track todo.id){
+                  <li class="list-group-item"> {{todo.nomorg }} 
+                    <button class="btn btn-sm btn-danger ms-2" (click)="supprimer(todo)" >  Suprimmer </button>
+                    <button class="btn btn-sm btn-warning ms-2" (click)="detail(todo)" > Détail </button>
+                    <button class="btn btn-sm btn-primary ms-2" (click)="wannarapport(todo)" > setectionner </button>
+                  </li>  }
+               }@else {
+                <p class="text-muted" >  Aucun organisme trouvé.</p>
+               }
+            </ul>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-primary" (click)="wannaadd()"  >   Ajouter un organisme</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    @if (seeDetail) {
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item" >
+                
+                  {{ selectedTodo2.nomorg }}
+            
+                </li>
+                <li class="list-group-item" >
+                  {{ selectedTodo2.region }}
+                 
+                 </li>
+                 <li class="list-group-item" >
+                
+                  {{ selectedTodo2.ville }}
+                 </li>
+                 <li class="list-group-item" >
+                  {{ selectedTodo2.idoforg }}
+                 </li>
+                 <li class="list-group-item" >
+                  {{ selectedTodo2.email }}
+                 </li>
+                 <li class="list-group-item" >
+                
+                  {{ selectedTodo2.tele}}
+                 </li>
+              </ul> 
+         
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary" (click)="retour2()" >  Retour </button>
+            </div>
+          </div>
+        </div> 
+      </div>
+      }
+
+
+
+
+    @if (ajouter) {
+    <div class="card" id="formOfOrg">
+      
+      <div class="card-body">
+        <h5 class="card-title"> Ajouter un Organisme</h5>
+
+        
+          <div class="mb-3">
+            
+            <label for="nomOrganisme" class="form-label">Nom de l'Organisme</label>
+            <input type="text"  [(ngModel)]="todo.nomorg" class="form-control" id="nomOrganisme" name="nomOrganisme" required> <!--[(ngModel)]="nouvelOrganisme.nom" -->
+          </div>
+
+          <div class="mb-3">
+              <label for="id" class="form-label">Identifiant :</label>
+              <input     [(ngModel)]="todo.idoforg" type="text"  class="form-control" id="id" name="id">
+             
+            </div>
+            <div class="mb-3">
+              <label for="region" class="form-label">Region :</label>
+              <input    [(ngModel)]="todo.region" type="text" class="form-control" id="region" name="region">
+              
+            </div>
+            <div class="mb-3">
+              <label for="ville" class="form-label">Ville :</label>
+              <input   [(ngModel)]="todo.ville" type="text" class="form-control" id="ville" name="ville">
+              
+            </div>
+
+          <div class="mb-3">
+            <label for="telephone" class="form-label">Téléphone</label>
+            <input  [(ngModel)]="todo.tele"  type="tel" class="form-control" id="telephone" name="telephone">
+            
+          </div>
+
+          <div class="mb-3">
+              <label for="email" class="form-label">Email :</label>
+              <input   [(ngModel)]="todo.email" type="email" class="form-control" id="email" name="email">
+              
+            </div>
+
+          <button (click)="addTodo()" class="btn btn-success ">Ajouter</button>
+          <button (click)="retour1()" class="btn btn-warning ">Retour</button>
+     
+      </div>
+    </div>
+
+     }
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <div id ="rapports-section">
+
+        <div  class="row justify-content-center mb-4">         
+            <div class="col-md-6">
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="card-title">Génerer Un Rapport Budgétaire </h3>
+                  @if (selectedTodo.id ==  null ) {
+                     <h6 id ="notselected">Selectionner d'abord un Organisme  en haute </h6>
+                    }
+                  <form id ="selected" (ngSubmit)="generateRapport(selectedTodo,yearofsituation)">
+                  <p><strong>Nom:</strong>  {{ selectedTodo.nomorg}} </p>
+                  <div class="mb-3">
+                    <label for="year" class="form-label">L'Année  </label>
+                    <input [(ngModel)]="yearofsituation"  type="number" class="form-control" id="year" name="year" min="2000" max="2090" > 
+                  </div>
+                  <div class="row justify-content-center mb-4">
+                    <div class="d-flex align-items-center">
+                      <div class="file-upload-wrapper me-3"> 
+                        <label class="btn btn-primary">
+                          Recettes
+                          <input   [(ngModel)]="recetteFile" (change)="onFileChange1($event)" name="recetteFile" type="file" accept=".xlsx, .xls" hidden  required />
+                        </label>
+                      </div>
+                      <div class="file-upload-wrapper">
+                        <label class="btn btn-primary">
+                          Dépenses
+                          <input  [(ngModel)]="depenseFile"  (change)="onFileChange2($event)"  name="depenseFile" type="file" accept=".xlsx, .xls" hidden required />
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-warning ms-2" > Génerer Rapport </button> 
+                  @if (isgenerated){
+                    <button class="btn btn-success ms-2" (click)="wannasee()" > Voir Le Rapport </button>
+                  }              
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+
+
+
+          
+
+        @if(look){ 
+            <div class="row justify-content-center mb-4" >
+              <div class="col-md-10">
+                <div class="card">
+                  <div class="card-body">
+                    
+                    {{csvRapport}}
+
+
+                    <button class="btn btn-success" >Valider</button>
+                    <button class="btn btn-secondary ms-2" >edit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+         } 
+    </div>
+
+
+
+
+    <div class="row justify-content-center mb-4" id="users-section">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"> Utilisateurs </h5>
+            <ul class="list-group list-group-flush">
+
+                @for(user of users; track user.id){
+                  <li class="list-group-item"> {{user.firstName }} {{user.lastName }} 
+                    <button class="btn btn-sm btn-danger ms-2" (click)="supprimerUser(user)" >  Suprimmer </button>
+                  </li>  }
+
+            </ul>
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-secondary ms-2" (click)="wannaaddUser()"  > Ajouter Utilisateur </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+
+    @if (ajouteruser) {
+      <div class="card" id="formOfUser">
+        <div class="card-body">
+          <h5 class="card-title"> Ajouter un Utilisateur </h5>
+  
+          
+            <div class="mb-3">
+              
+              <label for="userfirstname" class="form-label">Prénom  :</label>
+              <input type="text"  [(ngModel)]="user.firstName" class="form-control" id="userfirstname" name="userfirstname" required> <!--[(ngModel)]="nouvelOrganisme.nom" -->
+            </div>
+
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Nom  :</label>
+                <input    [(ngModel)]="user.lastName" type="text" class="form-control" id="lastName" name="lastName">
+                
+              </div>
+              <div class="mb-3">
+                <label for="emailuser" class="form-label">Email  :</label>
+                <input   [(ngModel)]="user.emailId" type="email" class="form-control" id="emailuser" name="emailuser">
+                
+              </div>
+  
+            <div class="mb-3">
+              <label for="telephone" class="form-label"> Téléphone : </label>
+              <input  [(ngModel)]="user.mobileNo"  type="tel" class="form-control" id="mobileNo" name="mobileNo">
+              
+            </div>
+  
+            <div class="mb-3">
+                <label for="email" class="form-label">Password : </label>
+                <input   [(ngModel)]="user.password" type="password" class="form-control" id="password" name="password">
+                
+              </div>
+  
+            <button (click)="addUser()" class="btn btn-success ">Terminer </button>
+            <button (click)="retouruser()" class="btn btn-warning ">Retour</button>
+       
+        </div>
+      </div>
+  
+       }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <app-footer></app-footer> 
+
+

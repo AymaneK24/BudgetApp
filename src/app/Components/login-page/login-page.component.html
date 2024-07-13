@@ -1,0 +1,23 @@
+<div class="back">
+    <div class="d-flex flex-column justify-content-center align-items-center vh-100">
+        <h1 class="text-center">
+            <img class="images" src="logo.png" width="200px" />
+        </h1>
+        <div class="login-container">
+            <h2 class="text-center">Login</h2>
+            <form>
+                <div class="form-group mb-3">
+                    <label for="EmailId">Email address</label>
+                    <input type="email" class="form-control" id="EmailId" name="EmailId" [(ngModel)]="loginObj.EmailId" placeholder="Enter email" required="">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" id="Password" name="Password" [(ngModel)]="loginObj.Password" placeholder="Password" required>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                    <button class="btn btn-success" type="button" (click)="onLogin()">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
