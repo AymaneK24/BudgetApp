@@ -4,7 +4,6 @@ import { TodoService } from './../todo.service';
 import { Component,  inject,  OnInit } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 import { FooterComponent } from "../footer/footer.component";
-import { OrganismesPageComponent } from '../organismes-page/organismes-page.component';
 import { FormsModule } from '@angular/forms';
 import { Todo } from '../todo';
 import { Rapport } from '../../Rapport';
@@ -23,7 +22,7 @@ import { LoggerService } from '../../logger.service';
 @Component({
   selector: 'app-principale-page',
   standalone: true,
-  imports: [RouterModule, RouterLink, FooterComponent,OrganismesPageComponent,FormsModule],
+  imports: [RouterModule, RouterLink, FooterComponent,FormsModule],
   templateUrl: './principale-page.component.html',
   styleUrl: './principale-page.component.css'
 })
@@ -33,6 +32,7 @@ import { LoggerService } from '../../logger.service';
 
 export class PrincipalePageComponent implements OnInit{
 
+
   private UrlCreate = 'https://freeapi.miniprojectideas.com/api/User/CreateNewUser';
 
   emailUser: string = '';
@@ -40,12 +40,17 @@ export class PrincipalePageComponent implements OnInit{
   emailLoger : string = '';
 
 
-
+rc = 10.4;
+dp = 10.5;
 
 log = inject(LoggerService) ; 
 
 
 ajouteruser = false;
+
+parseFloat(arg0: string) {
+  return parseFloat(arg0);
+  }
 
 
 
@@ -116,6 +121,7 @@ ajouteruser = false;
     http = inject(HttpClient);
 
   todos: Todo[] =[];
+  iintrs : Initr[] = [];
   users: User[] =[];
 
   
@@ -160,6 +166,7 @@ ajouteruser = false;
     this.getAllUsers();
     this.emailLoger = this.log.emailusing;
     this.init();
+    this.getAllIntrs();
     
   }
 
@@ -226,8 +233,6 @@ ajouteruser = false;
 
   //constructor(private todoService : TodoService ){ }
   todoService = inject(TodoService);
-
-
   ajouter = false ;
 
   addTodo() {
@@ -244,12 +249,18 @@ ajouteruser = false;
       }
     })
   }
-
   getAllTodos(){
     this.todoService.getTodos().subscribe({
     next : (data) => (this.todos = data),
     })
-    
+  }
+
+
+
+  getAllIntrs(){
+    this.rapportService.getInitrs().subscribe({
+      next : (data) => (this.iintrs = data)
+    })
   }
 
   ifnull(d : Todo){
@@ -374,8 +385,11 @@ ajouteruser = false;
 
 
       isgenerated = false ;
-      look = false ; 
+      look = false ;
+      lineDP: string[] = [];
+      lineRC: string[] = [];
 
+      linesRP: number[] = [];
 
       generateRapport(com : Todo, y : number ) {
 
@@ -383,68 +397,29 @@ ajouteruser = false;
        this.intr1.year = y ;
        this.intr1.depensecsv = this.csvdepense ;
        this.intr1.recettecsv = this.csvrecette   ;
-       this.rapportService.addInitr(this.intr1).subscribe({  
-        next : () => {
-        }
-       })
+       
+       
+      this.lineDP = this.csvdepense.split('\n');
+      this.lineRC = this.csvrecette.split('\n');
+      console.log(this.lineDP);
 
+  
        this.isgenerated = true ; 
       }
 
       wannasee(){
+        this.raporg=this.selectedTodo.nomorg;
+        this.yearorg= this.yearofsituation;
         if(this.isgenerated){
           this.look = true ;
         }
       }
-
-
-     /* createEmptyDatai(): emptyDatai {
-        return {
-            "Situation globale par Chapitre": "",
-            "": "",
-            "_1": "",
-            "_2": "",
-            "_3": "",
-            "_4": "",
-            "_5": "",
-            "_6": "",
-            "_7": "",
-            "_8": "",
-            "_9": "",
-            "_10": "",
-            "_11": "",
-            "_12": "",
-            "_13": "",
-            "_14": "",
-            "_15": "",
-            "_16": ""
-        };
-    }
-
-     
-
-      generateCsvRapport(csvRecette: string, csvDepense: string): string {
-        
-       
-       const dataRecette=  Papa.parse(csvRecette, { header: true , skipEmptyLines: false }).data;
-        const dataDepense = Papa.parse(csvDepense, { header: true, skipEmptyLines:  false }).data;
-        const rapportData: any[] = [];
-
-        console.log(dataRecette); 
-
-        
-
-       // rapportData.push(dataRecette[5]["Situation globale par Chapitre"]); 
-
-
-        this.csvRapport = Papa.unparse(rapportData);
-        this.isgenerated = true ; 
-        return Papa.unparse(rapportData);
-
-
+      valider(){
+        this.rapportService.addInitr(this.intr1).subscribe({  
+          next : () => {
+          }
+         })
       }
-
-*/
 
 
         onFileChange1(event: any): void {
@@ -569,7 +544,39 @@ ajouteruser = false;
       getUser(email: string) {
         return this.userService.getUserByEmail(email) 
       }
+      retrlook(){
+        this.look = false;
+      }
 
+      raporg = '';
+      yearorg = 0 ; 
+
+
+
+
+wannaseeit(a : Initr){
+  this.intr1 = a ; 
+
+}
+ 
+ifnull2(d : Initr[]){
+  if(d==null){
+    return false ;
+  }else{
+    return true;
+  }
+
+}
+
+ 
+
+
+
+
+
+    
+
+   
      
     }
     

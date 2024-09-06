@@ -1,11 +1,9 @@
-import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
-import { OrganismesPageComponent } from './Components/organismes-page/organismes-page.component';
 import { LoginPageComponent } from './Components/login-page/login-page.component';
-import { Routes, CanActivateChildFn } from '@angular/router';
+import { Routes } from '@angular/router';
 import { PrincipalePageComponent } from './Components/principale-page/principale-page.component';
-
-import { UsersComponent } from './Components/users/users.component';
 import { authGuard } from './guard/auth.guard';
+
+
 
 export const routes: Routes = [
     {
@@ -14,12 +12,9 @@ export const routes: Routes = [
       pathMatch: "full"
     },
     {
-      path: "resetpassword",
-      component: ResetPasswordComponent
-    },
-    {
       path: "login",
-      component: LoginPageComponent
+      component: LoginPageComponent, 
+      canActivate : [authGuard]
     },
     {
       path: "principale",

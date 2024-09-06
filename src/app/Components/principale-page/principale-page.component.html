@@ -210,7 +210,7 @@
                       </div>
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-warning ms-2" > Génerer Rapport </button> 
+                  <button type="submit" class="btn btn-warning ms-2" (click)="generateRapport(selectedTodo,yearofsituation)"> Génerer Rapport </button> 
                   @if (isgenerated){
                     <button class="btn btn-success ms-2" (click)="wannasee()" > Voir Le Rapport </button>
                   }              
@@ -230,18 +230,221 @@
               <div class="col-md-10">
                 <div class="card">
                   <div class="card-body">
+
+                    <div >
+                      <div class="d-flex align-items-center justify-content-between">
+                        <img class="images" src="logo.png" width="100px"/>
+                        <h4 class="mx-auto display-4" style="font-style: oblique;">Gestion {{this.yearorg}}</h4>
+                        <img class="images" src="logox.jpg" width="100px"/>
+                    </div>
                     
-                    {{csvRapport}}
+                      <h5>Rapport Budgétaire de l'année {{yearorg}} de {{raporg}}  </h5>
+                      <table class="table table-bordered table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>********</th>
+                                <th>Recettes</th>
+                                <th>Dépenses</th>
+                                <th>Excédent</th>
+                                <th>Déficit</th>
+                                <th>Observations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td> <h5>Budget annexe de : </h5> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                            <tr>
+                                <td>1ère Partie</td>
+                                <td> {{this.lineRC[11].split(',')[13]}} </td>
+                                <td>{{this.lineDP[5].split(',')[4]}}</td>
 
+                                @if(parseFloat(this.lineRC[11].split(',')[13]) > parseFloat(this.lineDP[5].split(',')[4]) ){
+                                  <td> {{parseFloat(this.lineRC[11].split(',')[13]) - parseFloat(this.lineDP[5].split(',')[4])  }}</td>
+                                  <td>0</td>
+                                }
+                                @else {
+                                  <td> 0</td>
+                                  <td>{{-parseFloat(this.lineRC[11].split(',')[13]) + parseFloat(this.lineDP[5].split(',')[4])  }}</td>
+                                }
+                                
+                                <td><input type="text" class="form-control" placeholder="à verser à la 2éme partie du BA ..."></td>
+                            </tr>
+                            <tr>
+                                <td>2ème Partie</td>
+                                <td> {{this.lineRC[12].split(',')[13]}}</td>
+                                <td>{{this.lineDP[6].split(',')[4]}}</td>
+                                 @if(parseFloat(this.lineRC[12].split(',')[13]) > parseFloat(this.lineDP[6].split(',')[4]) ){
+                                  <td> {{parseFloat(this.lineRC[12].split(',')[13]) - parseFloat(this.lineDP[6].split(',')[4])  }}</td>
+                                  <td>0</td>
+                                }
+                                @else {
+                                  <td> 0</td>
+                                  <td>{{-parseFloat(this.lineRC[12].split(',')[13]) + parseFloat(this.lineDP[6].split(',')[4])  }}</td>
+                                }
+                                <td><input type="text" class="form-control" placeholder="à verser à la 2éme partie du BAaprées mise en réserve du montant des crédits ..."></td>
+                            </tr>
+                            <tr>
+                              <td> <h5>Comptes Spéciaux : </h5> </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td><input type="text" class="form-control" placeholder="à reporter ou à verser à la 2éme Partie du BP pour le comptes clotures ..."></td>
+                          </tr>
+                            <tr>
+                                <td>CDD Éclairage Publique</td>
+                                <td> {{this.lineRC[13].split(',')[13]}}</td>
+                                <td>{{this.lineDP[7].split(',')[4]}}</td>
+                                @if(parseFloat(this.lineRC[13].split(',')[13]) > parseFloat(this.lineDP[7].split(',')[4]) ){
+                                  <td> {{parseFloat(this.lineRC[13].split(',')[13]) - parseFloat(this.lineDP[7].split(',')[4])  }}</td>
+                                  <td>0</td>
+                                }
+                                @else {
+                                  <td> 0</td>
+                                  <td>{{-parseFloat(this.lineRC[13].split(',')[13]) + parseFloat(this.lineDP[7].split(',')[4])  }}</td>
+                                }
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>CDD Eau</td>
+                                <td> {{this.lineRC[14].split(',')[13]}}</td>
+                                <td>{{this.lineDP[8].split(',')[4]}}</td>
+                                @if(parseFloat(this.lineRC[14].split(',')[13]) > parseFloat(this.lineDP[8].split(',')[4]) ){
+                                  <td> {{parseFloat(this.lineRC[14].split(',')[13]) - parseFloat(this.lineDP[8].split(',')[4])  }}</td>
+                                  <td>0</td>
+                                }
+                                @else {
+                                  <td> 0</td>
+                                  <td>{{-parseFloat(this.lineRC[14].split(',')[13]) + parseFloat(this.lineDP[8].split(',')[4])  }}</td>
+                                }
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>CAS Surtaxe d'Abattage</td>
+                                <td> {{this.lineRC[15].split(',')[13]}}</td>
+                                <td>{{this.lineDP[9].split(',')[4]}}</td>
+                                @if(parseFloat(this.lineRC[15].split(',')[13]) > parseFloat(this.lineDP[9].split(',')[4]) ){
+                                  <td> {{parseFloat(this.lineRC[15].split(',')[13]) - parseFloat(this.lineDP[9].split(',')[4])  }}</td>
+                                  <td>0</td>
+                                }
+                                @else {
+                                  <td> 0</td>
+                                  <td>{{-parseFloat(this.lineRC[15].split(',')[13]) + parseFloat(this.lineDP[9].split(',')[4])  }}</td>
+                                }
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>CAS Projet de Réhabilitation des Bidonvilles SM</td>
+                                <td> {{this.lineRC[16].split(',')[13]}}</td>
+                                <td>{{this.lineDP[10].split(',')[4]}}</td>
+                                @if(parseFloat(this.lineRC[16].split(',')[13]) > parseFloat(this.lineDP[10].split(',')[4]) ){
+                                  <td> {{parseFloat(this.lineRC[16].split(',')[13]) - parseFloat(this.lineDP[10].split(',')[4])  }}</td>
+                                  <td>0</td>
+                                }
+                                @else {
+                                  <td> 0</td>
+                                  <td>{{-parseFloat(this.lineRC[16].split(',')[13]) + parseFloat(this.lineDP[10].split(',')[4])  }}</td>
+                                }
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                                <td>CAS ILDG</td>
+                                <td> {{this.lineRC[17].split(',')[13]}}</td>
+                                <td> {{this.lineDP[11].split(',')[4]}}</td>
+                                @if(parseFloat(this.lineRC[17].split(',')[13]) > parseFloat(this.lineDP[11].split(',')[4]) ){
+                                  <td> {{parseFloat(this.lineRC[17].split(',')[13]) - parseFloat(this.lineDP[11].split(',')[4])  }}</td>
+                                  <td>0</td>
+                                }
+                                @else {
+                                  <td> 0</td>
+                                  <td>{{-parseFloat(this.lineRC[17].split(',')[13]) + parseFloat(this.lineDP[11].split(',')[4])  }}</td>
+                                }
+                                <td>...</td>
+                            </tr>
+                            <tr>
+                              <td> <h5>Budget Principale : </h5> </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                          </tr>
+                            <tr>
+                                <td>1ère Partie</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" class="form-control" placeholder="à verser à la 2éme partie ... "></td>
+                            </tr>
+                            <tr>
+                                <td>2ème Partie</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><input type="text" class="form-control" placeholder="à reporter à l a 2éme Partie du BP de l'année suivante ... "></td>
+                            </tr>
+                            <!-- Totaux -->
+                            <tr>
+                                <td>Totaux</td>
+                                <td>{{parseFloat(this.lineRC[11].split(',')[13]) + parseFloat(this.lineRC[12].split(',')[13]) +parseFloat(this.lineRC[13].split(',')[13])+parseFloat(this.lineRC[14].split(',')[13])+parseFloat(this.lineRC[15].split(',')[13]) +parseFloat(this.lineRC[16].split(',')[13])+parseFloat(this.lineRC[17].split(',')[13])}}</td>
+                                <td> {{parseFloat(this.lineDP[5].split(',')[4])+parseFloat(this.lineDP[6].split(',')[4])+parseFloat(this.lineDP[7].split(',')[4])+parseFloat(this.lineDP[8].split(',')[4])+parseFloat(this.lineDP[9].split(',')[4])+parseFloat(this.lineDP[10].split(',')[4])+parseFloat(this.lineDP[11].split(',')[4])}} </td>
+                                @if (parseFloat(this.lineRC[11].split(',')[13]) + parseFloat(this.lineRC[12].split(',')[13]) +parseFloat(this.lineRC[13].split(',')[13])+parseFloat(this.lineRC[14].split(',')[13])+parseFloat(this.lineRC[15].split(',')[13]) +parseFloat(this.lineRC[16].split(',')[13])+parseFloat(this.lineRC[17].split(',')[13]) > parseFloat(this.lineDP[5].split(',')[4])+parseFloat(this.lineDP[6].split(',')[4])+parseFloat(this.lineDP[7].split(',')[4])+parseFloat(this.lineDP[8].split(',')[4])+parseFloat(this.lineDP[9].split(',')[4])+parseFloat(this.lineDP[10].split(',')[4])+parseFloat(this.lineDP[11].split(',')[4]) ) {
+                                  <td> {{parseFloat(this.lineRC[11].split(',')[13]) + parseFloat(this.lineRC[12].split(',')[13]) +parseFloat(this.lineRC[13].split(',')[13])+parseFloat(this.lineRC[14].split(',')[13])+parseFloat(this.lineRC[15].split(',')[13]) +parseFloat(this.lineRC[16].split(',')[13])+parseFloat(this.lineRC[17].split(',')[13]) - parseFloat(this.lineDP[5].split(',')[4])+parseFloat(this.lineDP[6].split(',')[4])+parseFloat(this.lineDP[7].split(',')[4])+parseFloat(this.lineDP[8].split(',')[4])+parseFloat(this.lineDP[9].split(',')[4])+parseFloat(this.lineDP[10].split(',')[4])+parseFloat(this.lineDP[11].split(',')[4])}} </td>
+                                <td>0</td>
+                                }
+                                @else {
+                                  <td>0</td>
+                                  <td> {{- parseFloat(this.lineRC[11].split(',')[13]) + parseFloat(this.lineRC[12].split(',')[13]) +parseFloat(this.lineRC[13].split(',')[13])+parseFloat(this.lineRC[14].split(',')[13])+parseFloat(this.lineRC[15].split(',')[13]) +parseFloat(this.lineRC[16].split(',')[13])+parseFloat(this.lineRC[17].split(',')[13]) + parseFloat(this.lineDP[5].split(',')[4])+parseFloat(this.lineDP[6].split(',')[4])+parseFloat(this.lineDP[7].split(',')[4])+parseFloat(this.lineDP[8].split(',')[4])+parseFloat(this.lineDP[9].split(',')[4])+parseFloat(this.lineDP[10].split(',')[4])+parseFloat(this.lineDP[11].split(',')[4])}} </td>
+                                }
+  
+                                
+                                <td>...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                  
+                    </div>
 
-                    <button class="btn btn-success" >Valider</button>
-                    <button class="btn btn-secondary ms-2" >edit</button>
+                    <button class="btn btn-success" (click)="valider()">Valider</button>
+                    <button class="btn btn-secondary ms-2"  >Refuser</button>
+                    <button class="btn btn-secondary ms-2"  (click)="retrlook()">Cacher</button>
+
                   </div>
                 </div>
               </div>
             </div>
          } 
     </div>
+
+    <div id="alreadyexist">
+      <div class="row justify-content-center mb-4">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Rapportes :  </h5>
+              <ul class="list-group list-group-flush">
+                @if(iintrs[0] != null ){
+                  @for(ab  of iintrs; track ab.id){
+                    <li class="list-group-item"> Rapport de {{ab.todo.nomorg}} à  {{ab.year}} 
+                      <button class="btn btn-sm btn-success ms-2" (click)="wannaseeit(ab)" > Voir </button>
+                      <button class="btn btn-sm btn-success ms-2"  > Imprimer </button>
+                    </li>  }
+                 }@else {
+                  <p class="text-muted" > Aucun Rappot n'est encore Validé.</p>
+                 }
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
