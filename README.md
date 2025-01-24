@@ -1,1 +1,1 @@
-
+Ton application de gestion budgétaire est une solution intuitive permettant aux utilisateurs de charger des fichiers Excel, de les convertir en CSV et de générer des rapports comparant recettes et dépenses. Avec une structure organisée en sections comme *Budget annexe*, *Comptes spéciaux* et *Budget principal*, elle facilite l'analyse et le suivi financier grâce à une interface claire et des outils simples à utiliser.
